@@ -21,3 +21,14 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/resources/views/returns
+/resources/views/admin/returns
+/resources/views/checkout
+/resources/views/price
+/app/Http/Controllers/ReturnController.php
+/app/Http/Controllers/OrderController.php
+/app/Http/Controllers/ReviewController.php
+/app/Models/Return.php
+/app/Models/Order.php
+/app/Models/Review.php
+/database/migrations/2025_09_28_064216_create_returns_table.php

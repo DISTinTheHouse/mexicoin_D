@@ -14,5 +14,13 @@ class Product extends Model
         'price',
         'stock',
         'image',
+        'created_at',
+        'updated_at',
+        'multiplier',
+        'discount',
+        'is_active',
+        'is_featured',
+        'coin_base',
+        'coin_base_type',
     ];
 }

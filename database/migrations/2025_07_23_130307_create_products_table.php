@@ -20,6 +20,12 @@ return new class extends Migration
             $table->integer('stock')->default(0);
             $table->string('image')->nullable();
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->decimal('multiplier', 8, 2)->default(1.00);
+            $table->decimal('discount', 8, 2)->default(0.00);
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_featured')->default(false);
+            $table->decimal('coin_base', 10, 2)->default(0.00);
+            $table->string('coin_base_type')->default('none');
         });
     }
 
