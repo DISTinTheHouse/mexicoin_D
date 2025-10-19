@@ -27,8 +27,26 @@ export default {
                   verde: '#7EA16B',
                 },
                 cyan: colors.cyan,
+                primary: "#fd3d57",
               },
+
+              fontFamily: {
+                    poppins: ["Poppins", "sans-serif"],
+                    roboto: ["Roboto", "sans-serif"],
+                },
         },
+
+        screen: {
+            sm: "576px",
+            md: "768px",
+            lg: "992px",
+            xl: "1200px",
+        },
+        container: {
+            center: true,
+            padding: "1rem",
+        },
+
     },
 
     plugins: [forms, typography, aspectRatio, colors],
