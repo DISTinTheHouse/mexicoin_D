@@ -12,14 +12,26 @@
         "autoprefixer": "^10.4.16",
         "axios": "^1.8.2",
         "concurrently": "^9.0.1",
+        "laravel-echo": "^2.2.0",
         "laravel-vite-plugin": "^1.2.0",
         "postcss": "^8.4.32",
-        "tailwindcss": "^3.4.17",
+        "pusher-js": "^8.4.0",
+        "tailwindcss": "^4.1.11",
         "vite": "^6.2.4"
     },
     "dependencies": {
+        "@preline/overlay": "^3.2.3",
         "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/postcss": "^4.1.12",
+        "@tiptap/core": "^3.6.6",
+        "@tiptap/pm": "^3.6.6",
+        "@tiptap/starter-kit": "^3.6.6",
+        "embla-carousel": "^8.6.0",
+        "embla-carousel-autoplay": "^8.6.0",
         "flowbite": "^3.1.2",
+        "flowbite-typography": "^1.0.5",
+        "pagedone": "^1.2.2",
+        "preline": "^3.2.3",
         "swiper": "^11.2.6"
     }
 }

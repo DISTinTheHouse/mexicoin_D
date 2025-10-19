@@ -7,126 +7,202 @@ use Illuminate\Database\Seeder;
 use App\Models\Product;
 use App\Models\Category;
 
-class ProductSeeder extends Seeder
-{
+class ProductSeeder extends Seeder {
+
     /**
      * Run the database seeds.
      */
-    public function run(): void
-    {
+    public function run(): void {
         
         Product::create([
-            'name' => 'Smartphone XYZ',
-            'description' => 'Latest model with advanced features.',
-            'price' => 299.99,
+            'name' => 'Moneda oro 20 pesos Maximiliano TEST',
+            'description' => '',
+            'price' => 81200.00,
             'category_id' => 1,
-            'stock' => 50,
-            'image' => 'https://example.com/images/smartphone_xyz.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_613307-MLM71085504090_082023-O-moneda-centenario-oro-20-pesos-maximiliano-1866-coleccion.webp',
+            'coin_base' => 81200.00,
+            'coin_base_type' => 'gold',
+            'is_featured' => true,
+        ]);
+        Product::create([
+            'name' => 'Moneda oro 0 TEST',
+            'description' => '',
+            'price' => 81200.00,
+            'category_id' => 1,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_613307-MLM71085504090_082023-O-moneda-centenario-oro-20-pesos-maximiliano-1866-coleccion.webp',
+            'coin_base' => 81200.00,
+            'coin_base_type' => 'gold',
+            'is_featured' => true,
+        ]);
+        Product::create([
+            'name' => 'Moneda oro 1 TEST',
+            'description' => '',
+            'price' => 81200.00,
+            'category_id' => 1,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_613307-MLM71085504090_082023-O-moneda-centenario-oro-20-pesos-maximiliano-1866-coleccion.webp',
+            'coin_base' => 81200.00,
+            'coin_base_type' => 'gold',
+            'is_featured' => true,
+        ]);
+        Product::create([
+            'name' => 'Moneda oro 2 TEST',
+            'description' => '',
+            'price' => 81200.00,
+            'category_id' => 1,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_613307-MLM71085504090_082023-O-moneda-centenario-oro-20-pesos-maximiliano-1866-coleccion.webp',
+            'coin_base' => 81200.00,
+            'coin_base_type' => 'gold',
+            'is_featured' => true,
         ]);
 
+
+        //Monedas plata
         Product::create([
-            'name' => 'Book ABC',
-            'description' => 'An insightful book on modern technology.',
-            'price' => 19.99,
-            'category_id' => 1,
-            'stock' => 100,
-            'image' => 'https://example.com/images/book_abc.jpg',
-        ]);
-        Product::create([
-            'name' => 'T-Shirt 123',
-            'description' => 'Comfortable cotton t-shirt with a stylish design.',
-            'price' => 15.99,
-            'category_id' => 3,
-            'stock' => 200,
-            'image' => 'https://example.com/images/tshirt_123.jpg',
-        ]);
-        Product::create([
-            'name' => 'Kitchen Set',
-            'description' => 'Complete kitchen set with essential tools.',
-            'price' => 49.99,
-            'category_id' => 1,
-            'stock' => 30,
-            'image' => 'https://example.com/images/kitchen_set.jpg',
-        ]);
-        Product::create([
-            'name' => 'Running Shoes',
-            'description' => 'Lightweight and durable running shoes.',
-            'price' => 89.99,
-            'category_id' => 4,
-            'stock' => 75,
-            'image' => 'https://example.com/images/running_shoes.jpg',
-        ]);
-        Product::create([
-            'name' => 'Skincare Set',
-            'description' => 'Complete skincare set for healthy skin.',
-            'price' => 39.99,
-            'category_id' => 4,
-            'stock' => 60,
-            'image' => 'https://example.com/images/skincare_set.jpg',
-        ]);
-        Product::create([
-            'name' => 'Board Game',
-            'description' => 'Fun and engaging board game for all ages.',
-            'price' => 24.99,
-            'category_id' => 4,
-            'stock' => 120,
-            'image' => 'https://example.com/images/board_game.jpg',
-        ]);
-        Product::create([
-            'name' => 'Car Accessories Kit',
-            'description' => 'Essential accessories for your car.',
-            'price' => 59.99,
+            'name' => 'Moneda plata 0 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 2,
-            'stock' => 40,
-            'image' => 'https://example.com/images/car_accessories_kit.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://m.media-amazon.com/images/I/61UBZNwwc-L._SY1000_.jpg',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
         ]);
+        //Monedas plata
         Product::create([
-            'name' => 'Vinyl Record',
-            'description' => 'Classic vinyl record of your favorite artist.',
-            'price' => 29.99,
+            'name' => 'Moneda plata 1 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 2,
-            'stock' => 80,
-            'image' => 'https://example.com/images/vinyl_record.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://m.media-amazon.com/images/I/61UBZNwwc-L._SY1000_.jpg',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
+            'is_featured' => true,
         ]);
+        //Monedas plata
         Product::create([
-            'name' => 'Smartwatch',
-            'description' => 'Stylish smartwatch with fitness tracking features.',
-            'price' => 199.99,
+            'name' => 'Moneda plata 2 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 2,
-            'stock' => 45,
-            'image' => 'https://example.com/images/smartwatch.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://m.media-amazon.com/images/I/61UBZNwwc-L._SY1000_.jpg',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
+            'is_featured' => true,
         ]);
+        //Monedas plata
         Product::create([
-            'name' => 'Yoga Mat',
-            'description' => 'High-quality yoga mat for comfort and stability.',
-            'price' => 29.99,
+            'name' => 'Moneda plata 3 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 2,
-            'stock' => 90,
-            'image' => 'https://example.com/images/yoga_mat.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://m.media-amazon.com/images/I/61UBZNwwc-L._SY1000_.jpg',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
+        ]);
+
+
+        //Billetes
+        Product::create([
+            'name' => 'Billete 0 TEST',
+            'description' => '',
+            'price' => 890.00,
+            'category_id' => 3,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://www.elimparcial.com/resizer/v2/SGXSALK4V5GAFMIPOSQ5BXH7PI.jpg?auth=38c52cf3bf4e491f1a6c5e31283996cc994feeb62ca1bf36618dd0438090e907&smart=true&width=1200&height=800&quality=70',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
+            'is_featured' => true,
         ]);
         Product::create([
-            'name' => 'Wireless Earbuds',
-            'description' => 'Compact and high-quality wireless earbuds.',
-            'price' => 79.99,
+            'name' => 'Billete 1 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 3,
-            'stock' => 100,
-            'image' => 'https://example.com/images/wireless_earbuds.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://www.elimparcial.com/resizer/v2/SGXSALK4V5GAFMIPOSQ5BXH7PI.jpg?auth=38c52cf3bf4e491f1a6c5e31283996cc994feeb62ca1bf36618dd0438090e907&smart=true&width=1200&height=800&quality=70',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
         ]);
         Product::create([
-            'name' => 'Coffee Maker',
-            'description' => 'Automatic coffee maker for a perfect brew.',
-            'price' => 89.99,
+            'name' => 'Billete 2 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 3,
-            'stock' => 50,
-            'image' => 'https://example.com/images/coffee_maker.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://www.elimparcial.com/resizer/v2/SGXSALK4V5GAFMIPOSQ5BXH7PI.jpg?auth=38c52cf3bf4e491f1a6c5e31283996cc994feeb62ca1bf36618dd0438090e907&smart=true&width=1200&height=800&quality=70',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
         ]);
         Product::create([
-            'name' => 'Fitness Tracker',
-            'description' => 'Advanced fitness tracker with heart rate monitor.',
-            'price' => 49.99,
+            'name' => 'Billete 3 TEST',
+            'description' => '',
+            'price' => 890.00,
             'category_id' => 3,
-            'stock' => 70,
-            'image' => 'https://example.com/images/fitness_tracker.jpg',
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://www.elimparcial.com/resizer/v2/SGXSALK4V5GAFMIPOSQ5BXH7PI.jpg?auth=38c52cf3bf4e491f1a6c5e31283996cc994feeb62ca1bf36618dd0438090e907&smart=true&width=1200&height=800&quality=70',
+            'coin_base' => 890.00,
+            'coin_base_type' => 'silver',
         ]);
+
+
+        //Numismatica
+        Product::create([
+            'name' => 'Moneda numismatica 0 TEST',
+            'description' => '',
+            'price' => 13900.00,
+            'category_id' => 5,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_929558-MLM49389322909_032022-O-1893-cc-un-dolar-morgan-vf-tono-mal-estado-moneda-rara-plata.webp',
+            'is_featured' => true,
+        ]);
+        Product::create([
+            'name' => 'Moneda numismatica 1 TEST',
+            'description' => '',
+            'price' => 13900.00,
+            'category_id' => 5,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_929558-MLM49389322909_032022-O-1893-cc-un-dolar-morgan-vf-tono-mal-estado-moneda-rara-plata.webp',
+        ]);
+        Product::create([
+            'name' => 'Moneda numismatica 2 TEST',
+            'description' => '',
+            'price' => 13900.00,
+            'category_id' => 5,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_929558-MLM49389322909_032022-O-1893-cc-un-dolar-morgan-vf-tono-mal-estado-moneda-rara-plata.webp',
+        ]);
+        Product::create([
+            'name' => 'Moneda numismatica 3 TEST',
+            'description' => '',
+            'price' => 13900.00,
+            'category_id' => 5,
+            'stock' => 13,
+            'multiplier' => 1.0,
+            'image' => 'https://http2.mlstatic.com/D_NQ_NP_929558-MLM49389322909_032022-O-1893-cc-un-dolar-morgan-vf-tono-mal-estado-moneda-rara-plata.webp',
+            'is_featured' => true,
+        ]);
+
     }
 }

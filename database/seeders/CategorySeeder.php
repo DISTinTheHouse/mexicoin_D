@@ -25,11 +25,15 @@ class CategorySeeder extends Seeder
         ]);
         Category::create([
             'name' => 'Billetes',
-            'description' => 'Billestes en papel moneda.',
+            'description' => 'Billetes en papel moneda.',
         ]);
         Category::create([
             'name' => 'Coleccion',
             'description' => 'Artículos de colección.',
+        ]);
+        Category::create([
+            'name' => 'Numismatica',
+            'description' => 'Artículos de colección numismática.',
         ]);
     }
 }
