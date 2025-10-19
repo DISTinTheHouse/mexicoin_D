@@ -1,11 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
 
-@import 'swiper/swiper-bundle.min.css';
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+@plugin "flowbite-typography";
 
+/* Preline UI */
+@import "../../node_modules/preline/variants.css";
+@source "../../node_modules/preline/dist/*.js";
+
+@import 'swiper/css';
+
+@source './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source './vendor/laravel/jetstream/**/*.blade.php';
+@source './storage/framework/views/*.php';
+@source './resources/views/**/*.blade.php';
+
+@theme {
+
+    --font-sans: "Figtree", "Poppins", "Roboto", "sans-serif";
+
+    --color-primary: #fd3d57;
+    --color-cyan: #06b6d4;
+    --color-indio-oscuro: #1C3144;
+    --color-indio-verde: #7EA16B;
+    --color-indio-gris: #596F62;
+}
+
+@layer base {
+    @screen sm {
+        max-width: 640px;
+    }
+    @screen md {
+        max-width: 768px;
+    }
+    @screen lg {
+        max-width: 1024px;
+    }
+    @screen xl {
+        max-width: 1280px;
+    }
+    @screen 2xl {
+        max-width: 1536px;
+    }
+}
+
+@layer theme {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100%;
+        padding: 1rem !important;
+    }
+
+    .container-row {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100%;
+        padding: 1rem;
+    }
+}
 
 [x-cloak] {
     display: none;

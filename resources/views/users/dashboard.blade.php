@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
     <meta charset="utf-8">
@@ -23,6 +23,12 @@
     @include('structure.header')
     @include('structure.cart')
 
+    
+  </body> 
+</html> --}}
+ 
+
+<x-app-layout>
     <div class="min-h-full">
       <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
       <div class="fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
@@ -58,6 +64,4 @@
       @livewireScripts
       @include('structure.scripts')
     </div>
-  </body> 
-</html>
- 
+</x-app-layout>

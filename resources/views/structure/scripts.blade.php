@@ -27,6 +27,27 @@
     toggleMenu.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
-</script>   
+</script>  
 
+<script>
+    // Configurar Pusher
+
+    var pusher = new Pusher('ad7a190d34e778b213f8', {
+      cluster: 'us2'
+    });
+
+    // Suscribirse al canal
+    var channel = pusher.subscribe('products');
+    channel.bind('products.updated', function(data) {
+        console.log("Productos actualizados, recargando...");
+        location.reload(); // refresca la página completa
+    });
+</script>
+
+
+<!-- Flowbite JS -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+<script src="./node_modules/preline/dist/preline.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
