@@ -1,16 +1,26 @@
 <x-guest-layout>
-    {{-- Store side --}}
-    <div class="w-9/12 mt-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-indio-oscuro text-center mb-10">Comprar productos</h2>
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Encabezado -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#1C3144] tracking-tight">
+          Comprar <span class="text-yellow-500">Productos</span>
+        </h2>
+        <div class="mt-3 h-1 w-24 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto rounded-full shadow-lg"></div>
+      </div>
 
-        <div class="-mx-px border-l border-gray-300 grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
-        
-            @foreach ($products as $p)
-                @include('comps.store-productcard', ['producto' => $p])
-            @endforeach
-        </div>
-        <div class="mt-8">
-            {{ $products->links() }} <!-- Pagination links -->
-        </div>
+      <!-- Grid de productos -->
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        @foreach ($products as $p)
+          @include('comps.store-productcard', ['producto' => $p])
+        @endforeach
+      </div>
+
+      <!-- Paginación -->
+      <div class="mt-12 flex justify-center">
+        {{ $products->links() }}
+      </div>
     </div>
+  </section>
 </x-guest-layout>
