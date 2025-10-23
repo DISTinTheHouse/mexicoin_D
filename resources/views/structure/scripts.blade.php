@@ -44,6 +44,15 @@
     });
 </script>
 
+<script>
+    // Ocultar alerta de error después de 5 segundos
+    setTimeout(function() {
+        var errAlert = document.getElementById('errAlert');
+        if (errAlert) {
+            errAlert.style.display = 'none';
+        }
+    }, 5000);
+</script>
 
 <!-- Flowbite JS -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>

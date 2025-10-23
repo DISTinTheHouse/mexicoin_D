@@ -27,10 +27,16 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'last_name',
         'email',
         'password',
         'type',
     ];
+
+    public function getType(): string
+    {
+        return $this->type;
+    }
 
     /**
      * The attributes that should be hidden for serialization.
