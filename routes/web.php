@@ -14,6 +14,8 @@ Route::get('/contacto', function () {return view('contact');})->name('contact');
 Route::get('/politicas', function () {return view('client-help.privacy');})->name('policies');
 Route::get('/terminos', function () {  return view('terms');   })->name('terms');
 Route::get('/faq', function () {  return view('client-help.faq');   })->name('faq');
+Route::get('/devoluciones', function () {  return view('client-help.returns-policy');   })->name('returns-pol');
+Route::get('/membresía', function () {  return view('client-help.membership');   })->name('membership');
 Route::get('/producto/{id}', [ProductController::class, 'show'])->name('product.detail');
 
 // Colecciones
@@ -30,12 +32,6 @@ Route::get('/muy-pronto', function () {return view('users.com-soon');})->name('u
 Route::post('/cart/add', [OrderController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [OrderController::class, 'view'])->name('cart.view');
 Route::delete('/cart/{id}', [OrderController::class, 'deleteFromCart'])->name('cart.remove');
-
-// Cierre de compra y pedidos
-Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
-Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
-Route::get('/mi-pedido/{order}', [OrderController::class, 'show'])->name('orders.show');
-Route::post('/mi-pedido/{order}/proof', [OrderController::class, 'uploadProof'])->name('orders.uploadProof');
 
 Route::get('/tst-checkout-pass', function () {return view('store.chkout-pass');})->name('checkout-pass');
 Route::get('/tst-checkout-fail', function () {return view('store.chkout-fail');})->name('checkout-fail');
@@ -62,8 +58,11 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
         return view('users.com-soon', compact('user')); 
     })->name('my-orders');
 
+    // Route::get('/checkout', function () { return view('checkout'); })->name('checkout');
 
-    Route::get('/checkout', function () {
-        return view('checkout');
-    })->name('checkout');
+    // Cierre de compra y pedidos
+    Route::get('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+    Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+    Route::get('/mi-pedido/{order}', [OrderController::class, 'show'])->name('orders.show');
+    Route::post('/mi-pedido/{order}/proof', [OrderController::class, 'uploadProof'])->name('orders.uploadProof');
 });
