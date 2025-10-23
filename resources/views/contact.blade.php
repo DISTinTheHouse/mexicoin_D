@@ -1,72 +1,81 @@
 <x-guest-layout>
-<section class="bg-white py-16 px-6 md:px-16">
-    <div class="max-w-5xl mx-auto text-center">
-        <h1 class="text-3xl md:text-4xl font-bold text-[#1C3144] mb-4">Contáctanos</h1>
-        <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
-            Si tienes dudas sobre tu pedido, colecciones o cualquier consulta relacionada con nuestras monedas y billetes,
-            completa el siguiente formulario y te responderemos a la brevedad.
+  <section id="contacto" class="min-h-screen bg-gradient-to-br from-blue-50 via-gray-100 to-blue-100 relative overflow-hidden py-16">
+
+    <!-- Fondo decorativo -->
+    <div class="absolute inset-0 bg-[url('/assets/bg-pattern.svg')] bg-cover bg-center opacity-10"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
+      <!-- Título principal -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 tracking-tight">
+          Contáctanos
+        </h2>
+        <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+          Estamos disponibles para atenderte en nuestras sucursales o por teléfono.  
+          También puedes enviarnos un mensaje directamente desde aquí.
         </p>
-    </div>
+      </div>
 
-    <div class="max-w-3xl mx-auto bg-gray-50 rounded-2xl shadow-md p-8">
-        @if (session('success'))
-            <div class="bg-green-100 text-green-700 border border-green-300 rounded-lg p-4 mb-6">
-                {{ session('success') }}
-            </div>
-        @endif
+      <!-- Información de contacto -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Sucursal Monterrey -->
+        <div class="bg-white/70 backdrop-blur-md rounded-2xl border border-white/40 shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Sucursal Monterrey</h3>
+          <p class="text-gray-600">Av. Principal 123, Monterrey, NL</p>
+          <p class="text-gray-600">Tel: (81) 1234 5678</p>
+          <p class="text-gray-600">Email: contacto@empresa.com</p>
+        </div>
 
-        <form action="" method="POST" class="space-y-6">
-            @csrf
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <label for="name" class="block text-left font-semibold text-[#1C3144] mb-1">Nombre completo</label>
-                    <input type="text" name="name" id="name" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#7EA16B]" required>
-                </div>
-                <div>
-                    <label for="email" class="block text-left font-semibold text-[#1C3144] mb-1">Correo electrónico</label>
-                    <input type="email" name="email" id="email" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#7EA16B]" required>
-                </div>
-            </div>
+        <!-- Sucursal CDMX -->
+        <div class="bg-white/70 backdrop-blur-md rounded-2xl border border-white/40 shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Sucursal CDMX</h3>
+          <p class="text-gray-600">Calle Reforma 456, CDMX</p>
+          <p class="text-gray-600">Tel: (55) 9876 5432</p>
+          <p class="text-gray-600">Email: contacto@empresa.com</p>
+        </div>
+      </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <label for="phone" class="block text-left font-semibold text-[#1C3144] mb-1">Teléfono (opcional)</label>
-                    <input type="text" name="phone" id="phone" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#7EA16B]">
-                </div>
-                <div>
-                    <label for="subject" class="block text-left font-semibold text-[#1C3144] mb-1">Asunto</label>
-                    <input type="text" name="subject" id="subject" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#7EA16B]" required>
-                </div>
-            </div>
+      <!-- Formulario de contacto -->
+      <div class="bg-white/80 backdrop-blur-lg rounded-2xl border border-white/50 shadow-xl p-10 max-w-3xl mx-auto">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Envíanos un mensaje</h3>
 
+        <form action="" method="POST">
+          @csrf
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Nombre -->
             <div>
-                <label for="message" class="block text-left font-semibold text-[#1C3144] mb-1">Mensaje</label>
-                <textarea name="message" id="message" rows="5" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#7EA16B]" required></textarea>
+              <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre</label>
+              <input type="text" id="nombre" name="nombre"
+                class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+                required>
             </div>
 
-            <div class="text-center">
-                <button type="submit" class="bg-[#7EA16B] text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-[#596F62] transition">
-                    Enviar mensaje
-                </button>
+            <!-- Correo electrónico -->
+            <div>
+              <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+              <input type="email" id="email" name="email"
+                class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+                required>
             </div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="mt-6">
+            <label for="mensaje" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6"
+              class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+              required></textarea>
+          </div>
+
+          <!-- Botón de envío -->
+          <div class="text-center mt-8">
+            <button type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-md transition transform hover:-translate-y-0.5">
+              Enviar Mensaje
+            </button>
+          </div>
         </form>
+      </div>
     </div>
-
-    {{-- Información adicional --}}
-    <div class="max-w-4xl mx-auto mt-16 grid md:grid-cols-3 gap-6 text-center">
-        <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 class="text-[#1C3144] font-semibold mb-2">Correo</h3>
-            <p class="text-gray-600"><a href="mailto:contacto@inversionesnumismaticas.com" class="hover:underline">contacto@mexicoin.com.mx</a></p>
-        </div>
-        <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 class="text-[#1C3144] font-semibold mb-2">Teléfono</h3>
-            <p class="text-gray-600">+52 55 1234 5678</p>
-        </div>
-        <div class="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 class="text-[#1C3144] font-semibold mb-2">Horario</h3>
-            <p class="text-gray-600">Lunes a Viernes<br>9:00 AM – 6:00 PM</p>
-        </div>
-    </div>
-</section>
-
+  </section>
 </x-guest-layout>
