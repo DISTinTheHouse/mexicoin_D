@@ -82,6 +82,10 @@
                     <p class="text-gray-500 text-base font-normal mb-8 ">
                         {{ $product['description'] }}
                     </p>
+                    <div class="flex w-full my-4 justify-center">
+                        <span class="text-xl text-red-600 font-bold mr-2">LIVE Stock:</span>
+                        <span class="font-bold text-xl text-black ml-2">{{ $product['stock'] }} piezas.</span>
+                    </div>
                     <div class="block w-full">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                             <div class="flex items-center justify-center w-full">

@@ -4,7 +4,7 @@
     
     <!-- Logo -->
     <div class="flex flex-col items-center md:items-start space-y-3">
-      <img src="{{ asset('assets/logo/logo-angel-ts.PNG') }}" alt="logo" class="w-32 rounded-lg shadow-lg border border-yellow-600/50">
+      <img src="{{ asset('assets/logo/logo-angel-ts.jpg') }}" alt="logo" class="w-32 rounded-lg shadow-lg border border-yellow-600/50">
       <p class="text-sm text-gray-400">Tu portal confiable en metales preciosos y coleccionismo.</p>
     </div>
 
@@ -36,7 +36,7 @@
     <div class="flex flex-col items-center md:items-end space-y-4">
       <!-- Beneficios -->
       <div class="space-y-3 w-full max-w-xs">
-        <div class="flex items-center justify-between bg-gray-800/60 border border-yellow-600/40 rounded-lg p-3 hover:bg-gray-800 transition">
+        <a href="{{ route('membership') }}" class="flex items-center justify-between bg-gray-800/60 border border-yellow-600/40 rounded-lg p-3 hover:bg-gray-800 transition">
           <div class="flex items-center space-x-3">
             <i class="fa-solid fa-truck text-yellow-500 text-xl"></i>
             <div>
@@ -44,8 +44,8 @@
               <p class="text-xs text-gray-400">Con membresía pro</p>
             </div>
           </div>
-        </div>
-        <div class="flex items-center justify-between bg-gray-800/60 border border-yellow-600/40 rounded-lg p-3 hover:bg-gray-800 transition">
+        </a>
+        <a href="{{ route('returns-pol') }}" class="flex items-center justify-between bg-gray-800/60 border border-yellow-600/40 rounded-lg p-3 hover:bg-gray-800 transition">
           <div class="flex items-center space-x-3">
             <i class="fa-solid fa-rotate-left text-yellow-500 text-xl"></i>
             <div>
@@ -53,8 +53,8 @@
               <p class="text-xs text-gray-400">Recupera tu pieza</p>
             </div>
           </div>
-        </div>
-        <div class="flex items-center justify-between bg-gray-800/60 border border-yellow-600/40 rounded-lg p-3 hover:bg-gray-800 transition">
+        </a>
+        <a href="{{ route('contact') }}" class="flex items-center justify-between bg-gray-800/60 border border-yellow-600/40 rounded-lg p-3 hover:bg-gray-800 transition">
           <div class="flex items-center space-x-3">
             <i class="fa-solid fa-headset text-yellow-500 text-xl"></i>
             <div>
@@ -63,7 +63,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </a>
 
       <!-- Métodos de pago -->
       <div class="pt-3">
