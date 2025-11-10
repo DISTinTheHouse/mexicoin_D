@@ -4,8 +4,8 @@
 
             <div class="grid gap-6 grid-cols-2 lg:grid-cols-4">
                 @foreach ([
-                    ['nombre' => 'Oro', 'imagen' => 'https://www.banxico.org.mx/multimedia/rev_1kg_oro.png', 'filtro' => 'oro', 'link' => route('collections-gold')],
-                    ['nombre' => 'Plata', 'imagen' => 'https://www.banxico.org.mx/multimedia/anvLibPlata5oz.png', 'filtro' => 'plata', 'link' => route('collections-silver')],
+                    ['nombre' => 'Oro', 'imagen' => asset('assets/centenario-view.png'), 'filtro' => 'oro', 'link' => route('collections-gold')],
+                    ['nombre' => 'Plata', 'imagen' => asset('assets/plata-view.jpg'), 'filtro' => 'plata', 'link' => route('collections-silver')],
                     ['nombre' => 'Colecciones', 'imagen' => 'https://www.banxico.org.mx/multimedia/rev_1kg_oro.png', 'filtro' => 'especiales', 'link' => route('collections-numis')],
                     ['nombre' => 'Billetes', 'imagen' => 'https://m.media-amazon.com/images/I/71xTuJez-EL.jpg', 'filtro' => 'billetes', 'link' => route('collections-bucks')],
                 ] as $item)

@@ -4,7 +4,7 @@
     
     <!-- Logo -->
     <div class="flex flex-col items-center md:items-start space-y-3">
-      <img src="{{ asset('assets/logo/logo-angel-ts.jpg') }}" alt="logo" class="w-32 rounded-lg shadow-lg border border-yellow-600/50">
+      <img src="{{ asset('assets/logo/logo-angel-ts.png') }}" alt="logo" class="w-32 rounded-lg shadow-lg border border-yellow-600/50">
       <p class="text-sm text-gray-400">Tu portal confiable en metales preciosos y coleccionismo.</p>
     </div>
 
